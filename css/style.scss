@@ -1,0 +1,161 @@
+@import 'colors.scss';
+
+$googleFont: 'Hind', sans-serif;
+$normalText: 'Tahoma', sans-serif;
+$sectionHeight: 900px;
+$navSpacing: 100px;
+
+html {
+    font-family: $normalText;
+    font-size: 18px;
+}
+
+body {
+    background-image: url("/img/natural_paper.png");
+    background-repeat: repeat;
+    padding-top: $navSpacing;
+}
+
+nav {
+    height: 80px;
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: $darkColor;
+    padding-top: 10px;
+}
+
+header {
+    font-family: $googleFont;
+    letter-spacing: 1px;
+
+    ul {
+        list-style: none;
+        margin-right: 50px;
+        margin-top: 10px;
+        font-family: $googleFont;
+        float: right;
+
+        li {
+            a {
+                color: white;
+                font-size: 200%;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 1px;
+                -moz-transition: all ease-in .25s;
+                -o-transition: all ease-in .25s;
+                -webkit-transition: all ease-in .25s;
+                transition: all ease-in .25s;
+
+                &:hover {
+                    letter-spacing: 3px;
+                    text-decoration: none;
+                }
+
+                &:visited {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#main {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    div {
+        padding-left: 35px;
+        padding-right: 35px;
+        margin-bottom: $navSpacing;
+    }
+
+    .contact {
+        margin-left: auto;
+        margin-right: auto;
+        height: $sectionHeight;
+        border: 1px solid purple;
+        label{
+            margin-top: 15px;
+        }
+        textarea {
+            display: block;
+            -moz-box-sizing: padding-box;
+            -webkit-box-sizing: padding-box;
+            box-sizing: padding-box;
+            overflow: hidden;
+            padding: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            width: 100%;
+        }
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+
+.sideShadow {
+    box-shadow: 6px 0 3px rgba(0, 0, 0, .5);
+}
+
+.shadow {
+    box-shadow: 1px 1px 5px 6px rgba(0,0,0,0.5);
+}
+
+.anchor {
+    display: block;
+    height: $navSpacing;
+    margin-top: -100px;
+    visibility: hidden;
+}
+
+.top {
+    height: $sectionHeight;
+    border: 1px solid black;
+}
+
+.about {
+    height: $sectionHeight;
+    border: 1px solid red;
+}
+
+.portfolio {
+    height: $sectionHeight;
+    border: 1px solid blue;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+.console-container {
+    font-family: $googleFont;
+    font-weight: 700;
+    font-size: 300%;
+    text-align: center;
+    width: 600px;
+    color: white;
+    background-color: $darkColor;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
+}
+
+#text {
+    margin-top: 10px;
+}
