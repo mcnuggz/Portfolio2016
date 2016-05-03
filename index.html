@@ -13,18 +13,17 @@
     <title>Webb Development - Index</title>
     <link href='https://fonts.googleapis.com/css?family=Hind:600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="hidden-xs">
+    <header>
         <nav class="shadow">
             <span class='console-container'>
                 <span id='text'></span>
                 <div class='console-underscore' id='console'>&#95;</div>
             </span>
 
-            <ul id="navigation" class="list-inline">
+            <ul id="navigation">
                 <li><a href="#top" class="smoothScroll">Home</a></li>
                 <li><a href="#about" class="smoothScroll">About</a></li>
                 <li><a href="#portfolio" class="smoothScroll">Portfolio</a></li>
@@ -34,66 +33,56 @@
         </nav>
     </header>
     <div id="main">
-
-        <span id="top" class="anchor"></span>
-        <div class="row">
-            <div class="col-md-12">
+        <div class="wrapper">
+            <span id="top" class="anchor"></span>
+            <div>
                 <div class="top">
                     <h1>Top</h1>
                 </div>
             </div>
-        </div>
 
-        <span id="about" class="anchor"></span>
-        <div class="row">
-            <div class="col-md-12">
+            <span id="about" class="anchor"></span>
+            <div>
                 <div class="about">
                     <h1>About</h1>
                 </div>
             </div>
-        </div>
 
-        <span id="portfolio" class="anchor"></span>
-        <div class="row">
-            <div class="col-md-12">
+            <span id="portfolio" class="anchor"></span>
+
+            <div>
                 <div class="portfolio">
                     <h1>Portfolio</h1>
                 </div>
             </div>
-        </div>
 
-        <span id="contact" class="anchor"></span>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="contact">
-                    <div class="row">
-                        <div class="col-md-6 body-content">
-                            <h1>Send A Message!</h1>
-                            <form>
-                                <label>Name:</label>
-                                <input type="text" class="form-control" />
-                                <label>Email:</label>
-                                <input type="text" class="form-control" />
-                                <label>Subject:</label>
-                                <input type="text" class="form-control" />
-                                <textarea class="autoExpand" rows="3" data-min-rows="3" placeholder="Your message here..."></textarea>
-                                <input type="button" class="btn btn-default btn-lg btn-warning" value="Send" />
-                            </form>
-                        </div>
+            <span id="contact" class="anchor"></span>
+            <div class="contact">
+                <div class="body-content nonForm">
+                    <h1> You can get a hold of me this way!</h1>
+                    
+                </div>
 
-                        <div class="col-md-6">
-                            <h1>Don't like forms?</h1>
-                        </div>
-                    </div>
+                <div class="body-content form">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name..."/>
+                        <input type="text" name="email" placeholder="Your Email.."/>
+                        <textarea class="autoExpand" rows="4" data-min-rows="4" placeholder="Your message here..." name="message"></textarea>
+                        <input class="submit sendButton" type="submit" value="Send" />
+                    </form>
                 </div>
             </div>
         </div>
+        <div class="clear"></div>
+        <footer class="shadow">
+            <p>&copy; <span id="copyYear"> </span> - Ryan Webb</p>
+        </footer>
     </div>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+
 
 </body>
 </html>

@@ -8,7 +8,9 @@ $(document).ready(function() {
         $(this).css("color", "#FF6700");
     }, function () {
         $(this).css("color", "#FFF");
-    });    
+    });
+
+
     consoleText(['Webb Development'], 'text', ['#ff6700']);
 
     function consoleText(words, id, colors) {

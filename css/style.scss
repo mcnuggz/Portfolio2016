@@ -1,9 +1,13 @@
-@import 'colors.scss';
-
+/*variables*/
 $googleFont: 'Hind', sans-serif;
 $normalText: 'Tahoma', sans-serif;
 $sectionHeight: 900px;
-$navSpacing: 100px;
+$navSpacing: 110px;
+$mainColor: #FF6700;
+$lightGray: #f6f6f6;
+$midGray: #DADAD9;
+$blue: #5BC3EB;
+$darkColor: #36382E;
 
 html {
     font-family: $normalText;
@@ -16,32 +20,45 @@ body {
     padding-top: $navSpacing;
 }
 
-nav {
-    height: 80px;
-    z-index: 9999;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: $darkColor;
-    padding-top: 10px;
+h1 {
+    font-family: $googleFont;
+}
+
+.body-content {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 header {
     font-family: $googleFont;
     letter-spacing: 1px;
 
-    ul {
+    nav {
+        height: 90px;
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-color: $darkColor;
+        padding-top: 10px;
+    }
+
+    #navigation {
         list-style: none;
         margin-right: 50px;
-        margin-top: 10px;
+        margin-top: 20px;
         font-family: $googleFont;
         float: right;
 
         li {
+            display: inline-block;
+            text-align: right;
+            margin-left: 20px;
+
             a {
                 color: white;
-                font-size: 200%;
+                font-size: 175%;
                 text-transform: uppercase;
                 text-decoration: none;
                 letter-spacing: 1px;
@@ -65,42 +82,111 @@ header {
 }
 
 #main {
-    padding-left: 15px;
-    padding-right: 15px;
+    .wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     div {
-        padding-left: 35px;
-        padding-right: 35px;
         margin-bottom: $navSpacing;
     }
 
-    .contact {
-        margin-left: auto;
-        margin-right: auto;
+    .top {
         height: $sectionHeight;
-        border: 1px solid purple;
-        label{
-            margin-top: 15px;
+        border: 1px solid black;
+    }
+
+    .about {
+        height: $sectionHeight;
+        border: 1px solid red;
+    }
+
+    .portfolio {
+        height: $sectionHeight;
+        border: 1px solid blue;
+    }
+
+    .contact {
+        width: 100%;
+        height: $sectionHeight - 250px;
+        padding-top: 20px;
+        padding-left: 20px;
+
+        .nonForm {
+            float: left;
+            width: 45%;
+            padding: 10px 15px;
         }
-        textarea {
-            display: block;
-            -moz-box-sizing: padding-box;
-            -webkit-box-sizing: padding-box;
-            box-sizing: padding-box;
-            overflow: hidden;
-            padding: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            width: 100%;
+
+        .form {
+            width: 45%;
+            float: left;
+            padding: 10px 15px;
+            margin-top: 100px;
+
+            h1 {
+                padding-top: -10px;
+            }
+
+            input[type=text] {
+                padding: 10px 10px;
+                width: 70%;
+                display: block;
+                margin-bottom: 15px;
+                font-size: 14pt;
+                font-family: $normalText;
+                background: rgba(0,0,0,0.3);
+            }
+
+            ::-webkit-input-placeholder{
+                font-style: italic;
+                font-family: $normalText;
+                letter-spacing: 2px;
+                color: black;
+                opacity: 1;
+            }
+
+            textarea {
+                display: block;
+                -moz-box-sizing: padding-box;
+                -webkit-box-sizing: padding-box;
+                box-sizing: padding-box;
+                overflow: hidden;
+                padding: 10px;
+                margin-bottom: 15px;
+                width: 70%;
+                font-size: 14pt;
+                background:rgba(0,0,0,0.3);
+            }
+
+            .sendButton {
+                text-transform: uppercase;
+                padding: 5px;
+                height: 50px;
+                width: 100px;
+            }
+        }
+    }
+
+    footer {
+        background-color: $darkColor;
+        height: 80px;
+        width: 100%;
+        color: $mainColor;
+        font-family: $googleFont;
+        font-size: 1.5em;
+
+        p {
+            padding: 20px 30px;
+            font-weight: 300;
         }
     }
 }
+
 
 .clear {
     clear: both;
 }
-
 
 .sideShadow {
     box-shadow: 6px 0 3px rgba(0, 0, 0, .5);
@@ -113,24 +199,10 @@ header {
 .anchor {
     display: block;
     height: $navSpacing;
-    margin-top: -100px;
+    margin-top: -110px;
     visibility: hidden;
 }
 
-.top {
-    height: $sectionHeight;
-    border: 1px solid black;
-}
-
-.about {
-    height: $sectionHeight;
-    border: 1px solid red;
-}
-
-.portfolio {
-    height: $sectionHeight;
-    border: 1px solid blue;
-}
 
 
 .hidden {
