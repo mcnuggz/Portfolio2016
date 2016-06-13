@@ -1,6 +1,6 @@
 /*variables*/
 $googleFont: 'Hind', sans-serif;
-$normalText: 'Tahoma', sans-serif;
+$normalText: 'Times New Roman', serif;
 $sectionHeight: 900px;
 $navSpacing: 110px;
 $mainColor: #FF6700;
@@ -34,7 +34,7 @@ header {
     letter-spacing: 1px;
 
     nav {
-        height: 90px;
+        height: 60px;
         z-index: 9999;
         position: fixed;
         width: 100%;
@@ -47,8 +47,9 @@ header {
     #navigation {
         list-style: none;
         margin-right: 50px;
-        margin-top: 20px;
+        margin-top: 10px;
         font-family: $googleFont;
+        font-size: 1.25em;
         float: right;
 
         li {
@@ -58,7 +59,6 @@ header {
 
             a {
                 color: white;
-                font-size: 175%;
                 text-transform: uppercase;
                 text-decoration: none;
                 letter-spacing: 1px;
@@ -106,44 +106,48 @@ header {
         border: 1px solid blue;
     }
 
+    #contactHeader {
+        padding-left: 0;
+        background-color: rgba(54, 56, 46, 0.8);
+        padding: 30px 20px 10px 20px;
+        width: 96.9%;
+        color: white;
+
+        span {
+            margin-left: 20px;
+        }
+    }
+
     .contact {
         width: 100%;
         height: $sectionHeight - 250px;
         padding-top: 20px;
         padding-left: 20px;
 
-        .nonForm {
-            float: left;
-            width: 45%;
-            padding: 10px 15px;
-        }
-
         .form {
-            width: 45%;
-            float: left;
-            padding: 10px 15px;
-            margin-top: 100px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
 
-            h1 {
-                padding-top: -10px;
+            label {
+                display: block;
+                font-family: $googleFont;
+                margin-top: 20px;
+                font-size: .9em;
             }
 
-            input[type=text] {
+            input[type=text], input[type=email] {
                 padding: 10px 10px;
-                width: 70%;
-                display: block;
-                margin-bottom: 15px;
-                font-size: 14pt;
+                font-size: 12pt;
+                width: 60%;
                 font-family: $normalText;
                 background: rgba(0,0,0,0.1);
             }
 
-            ::-webkit-input-placeholder{
-                font-style: italic;
+            ::-webkit-input-placeholder {
                 font-family: $normalText;
-                letter-spacing: 2px;
                 color: black;
-                opacity: 1;
+                opacity: .9;
             }
 
             textarea {
@@ -154,23 +158,31 @@ header {
                 overflow: hidden;
                 padding: 10px;
                 margin-bottom: 15px;
-                width: 70%;
+                width: 60%;
                 font-size: 14pt;
-                background:rgba(0,0,0,0.1);
+                background: rgba(0,0,0,0.1);
+            }
+
+            input:focus, textarea:focus {
+                border: 1px solid #FF6700;
             }
 
             .sendButton {
                 padding: 5px;
-                height: 60px;
-                width: 100px;
+                height: 58px;
+                width: 127px;
                 color: white;
                 border: none;
-                font-size: 16pt;
+                font-size: 14pt;
                 font-family: $googleFont;
                 background-color: $darkColor;
                 box-shadow: 0 6px 3px rgba(0, 0, 0, .3);
+                cursor: pointer;
+                letter-spacing: 1px;
+                margin-top: 20px;
             }
-            .sendButton:hover{
+
+            .sendButton:hover {
                 background-color: $mainColor;
             }
         }
@@ -220,12 +232,12 @@ header {
 .console-container {
     font-family: $googleFont;
     font-weight: 700;
-    font-size: 300%;
+    font-size: 1.9em;
     text-align: center;
     width: 600px;
     color: white;
     background-color: $darkColor;
-    margin-top: 10px;
+    padding-top: 30px;
     margin-left: 50px;
 }
 
@@ -237,5 +249,5 @@ header {
 }
 
 #text {
-    margin-top: 10px;
+    margin-top: 30px;
 }

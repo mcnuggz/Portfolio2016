@@ -19,10 +19,10 @@
 <body>
     <header>
         <nav class="shadow">
-            <span class='console-container'>
+            <div class='console-container'>
                 <span id='text'></span>
                 <div class='console-underscore' id='console'>&#95;</div>
-            </span>
+            </div>
 
             <ul id="navigation">
                 <li><a href="#top" class="smoothScroll">Home</a></li>
@@ -56,19 +56,19 @@
                     <h1>Portfolio</h1>
                 </div>
             </div>
-
+            <h1 id="contactHeader"><span>Get In Touch!</span></h1>
             <span id="contact" class="anchor"></span>
             <div class="contact">
-                <div class="body-content nonForm">
-                    <h1> You can get a hold of me this way!</h1>
-                    
-                </div>
-
                 <div class="body-content form">
-                    <form>
-                        <input type="text" name="name" placeholder="Your Name..."/>
-                        <input type="text" name="email" placeholder="Your Email.."/>
-                        <textarea class="autoExpand" rows="5" data-min-rows="4" placeholder="Your message here..." name="message"></textarea>
+                    <form role="form" method="post" action="index.php">
+                        <label>Name:</label>
+                        <input name="name" placeholder="Type here..." type="text"/>
+                        <label>Email:</label>
+                        <input name="email" type="email" placeholder="Type here..." />
+                        <label>Message:</label>
+                        <textarea class="autoExpand" rows="5" data-min-rows="4" placeholder="Type here..." name="message"></textarea>
+                        <label>*What is 2+2? (Anti-spam)</label>
+                        <input name="human" placeholder="Type here..." type="text"/><br />
                         <input class="submit sendButton" type="submit" value="Send" />
                     </form>
                 </div>
@@ -76,7 +76,7 @@
         </div>
         <div class="clear"></div>
         <footer class="shadow">
-            <p>&copy; <span id="copyYear"> </span> - Ryan Webb</p>
+            <p>&copy; <span id="copyYear"> </span> : Ryan Webb</p>
         </footer>
     </div>
 
